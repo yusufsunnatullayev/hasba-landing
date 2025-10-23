@@ -26,7 +26,7 @@ const Hero = () => {
         className="w-3/4 mx-auto"
       />
     ),
-    [MotionImage]
+    []
   );
 
   useEffect(() => {
