@@ -26,7 +26,7 @@ const Hero = () => {
         className="w-3/4 mx-auto"
       />
     ),
-    []
+    [MotionImage]
   );
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const Hero = () => {
               format={(n) => `${Math.floor(n)}+`}
               className="text-main-green font-bold text-3xl"
             />
-            <span className="text-base font-medium">Ko'nikmalar</span>
+            <span className="text-base font-medium">Ko&apos;nikmalar</span>
           </div>
         </div>
         {/* Center Content 🚩 */}
