@@ -32,13 +32,18 @@ const reasons = [
 
 const WhyHasba = () => {
   return (
-    <section id="why_hasba" className="w-full flex flex-col gap-10 py-12 px-24">
-      <h1 className="font-bold text-4xl">Nega Hasba?</h1>
-      <div className="w-full flex items-start gap-3">
+    <section
+      id="why_hasba"
+      className="w-[95%] md:w-[80%] lg:w-full mx-auto flex flex-col gap-10 py-12 lg:px-24 lg:pt-20"
+    >
+      <h1 className="font-bold text-xl md:text-3xl lg:text-4xl text-center lg:text-start">
+        Nega Hasba?
+      </h1>
+      <div className="w-full flex flex-wrap items-start gap-3">
         {reasons.map((item) => (
           <div
             key={item.id}
-            className="relative w-1/4 group h-[350px] flex flex-col justify-between p-6 rounded-xl bg-main-gray"
+            className="relative w-full md:w-[48%] lg:w-[24%] group h-[350px] flex flex-col justify-between p-6 rounded-xl bg-main-gray"
           >
             <item.icon
               size={90}

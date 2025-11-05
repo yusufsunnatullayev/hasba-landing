@@ -46,10 +46,10 @@ const Faq = () => {
   return (
     <section
       id="faq"
-      className="w-full pt-16 pb-8 px-24 flex flex-col items-center gap-10"
+      className="w-[95%] md:w-[80%] lg:w-full mx-auto pt-0 md:pt-8 lg:pt-16 pb-8 lg:px-24 flex flex-col items-center gap-5 md:gap-10"
     >
-      <h1 className="text-4xl font-bold">FAQ</h1>
-      <div className="w-1/2 flex flex-col gap-1">
+      <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">FAQ</h1>
+      <div className="w-full lg:w-1/2 flex flex-col gap-1">
         {faq.map((item) => (
           <Accordion
             key={item.id}

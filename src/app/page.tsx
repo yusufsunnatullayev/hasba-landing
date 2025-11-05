@@ -16,7 +16,7 @@ const Home = () => {
       <ProblemSolution />
       <Services />
       <WhyHasba />
-      <Reviews />
+      {/* <Reviews /> */}
       <Faq />
       <Banner />
       <Ads />

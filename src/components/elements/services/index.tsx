@@ -46,17 +46,19 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full pt-12 px-24 flex items-start justify-between gap-12"
+      className="w-[95%] md:w-[80%] lg:w-full pt-12 lg:px-24 mx-auto flex flex-col lg:flex-row items-start justify-between gap-12"
     >
-      <div className="w-[37%] h-full flex flex-col gap-5">
-        <h1 className="text-4xl font-bold">Asosiy Xizmatlar</h1>
+      <div className="w-full lg:w-[37%] h-full flex flex-col gap-5">
+        <h1 className="text-xl md:text-3xl lg:text-4xl text-center lg:text-start font-bold">
+          Asosiy Xizmatlar
+        </h1>
         <div className="w-full flex flex-col gap-1">
           {services.map((item) => (
             <div
               key={item.id}
               className="w-full flex flex-col p-5 gap-3 rounded-xl cursor-pointer group bg-main-gray"
             >
-              <h1 className="font-bold text-xl group-hover:text-main-green duration-150">
+              <h1 className="font-bold text-lg md:text-xl group-hover:text-main-green duration-150">
                 {item.title}
               </h1>
               <p className="font-normal text-base opacity-80">
@@ -66,7 +68,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-      <div className="w-[63%] h-full flex">
+      <div className="w-full lg:w-[63%] h-full flex flex-col md:flex-row gap-2 md:gap-10 lg:gap-0">
         <MotionImage
           src={image1}
           alt="Iphone Image"
@@ -74,9 +76,9 @@ const Services = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="w-[45%] h-[700px]"
+          className="w-full h-[490px] md:w-[45%] md:h-[700px]"
         />
-        <div className="flex-1 h-full flex flex-col items-end py-10 justify-between">
+        <div className="flex-1 h-full flex flex-col items-end py-10 md:pt-20 lg:pt-0 justify-between">
           <MotionImage
             src={image2}
             alt="Service second Image"

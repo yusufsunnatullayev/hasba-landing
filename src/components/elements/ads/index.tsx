@@ -12,8 +12,8 @@ const Ads = () => {
   const MotionImage = motion(Image);
 
   return (
-    <section className="w-full flex flex-col items-center gap-7 py-14 px-24">
-      <h1 className="text-3xl font-bold text-center w-[40%]">
+    <section className="w-full flex flex-col items-center gap-4 md:gap-7 py-14 px-10 lg:px-24">
+      <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-center w-full md:w-[80%] lg:w-[40%]">
         Moliya, Biznes, Soliq va huquqiy qarorlaringizni ishonch bilan qabul
         qiling. Hasbani hoziroq yuklab oling!
       </h1>
@@ -26,7 +26,7 @@ const Ads = () => {
         viewport={{ once: true }}
       />
       <motion.div
-        className="flex items-center gap-5"
+        className="flex items-center gap-2 md:gap-5"
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -39,11 +39,13 @@ const Ads = () => {
           <Image
             src={goole_play}
             alt="Google Play Store"
-            className="w-7 h-7 object-cover"
+            className="w-5 h-5 md:w-7 md:h-7 object-cover"
           />
           <div className="flex flex-col items-start leading-tight gap-0">
-            <span className="text-[10px] font-semibold">GET IT ON</span>
-            <span className="text-sm font-bold">Google Play</span>
+            <span className="text-[8px] md:text-[10px] font-semibold">
+              GET IT ON
+            </span>
+            <span className="text-xs md:text-sm font-bold">Google Play</span>
           </div>
         </Button>
         <Button
@@ -53,11 +55,13 @@ const Ads = () => {
           <Image
             src={apple}
             alt="Apple Store"
-            className="w-7 h-7 object-cover"
+            className="w-5 h-5 md:w-7 md:h-7 object-cover"
           />
           <div className="flex flex-col items-start leading-tight gap-0">
-            <span className="text-[10px] font-semibold">Download on the</span>
-            <span className="text-sm font-bold">App Store</span>
+            <span className="text-[8px] md:text-[10px] font-semibold">
+              Download on the
+            </span>
+            <span className="text-xs md:text-sm font-bold">App Store</span>
           </div>
         </Button>
       </motion.div>
