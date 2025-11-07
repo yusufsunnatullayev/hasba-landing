@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/assets/logo.svg";
 import goole_play from "@/assets/google_play.png";
 import apple from "@/assets/apple.png";
@@ -39,17 +39,24 @@ export const nav_items = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  let screen;
+  const [screen, setScreen] = useState<"sm" | "md" | "lg">("lg");
 
-  if (typeof window !== "undefined") {
-    if (window.innerWidth <= 640) {
-      screen = "sm";
-    } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-      screen = "md";
-    } else {
-      screen = "lg";
-    }
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setScreen("sm");
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        setScreen("md");
+      } else {
+        setScreen("lg");
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <nav className="relative w-full p-4">

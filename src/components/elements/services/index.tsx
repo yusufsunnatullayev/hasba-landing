@@ -56,9 +56,10 @@ const Services = () => {
           {services.map((item) => (
             <div
               key={item.id}
-              className="w-full flex flex-col p-5 gap-3 rounded-xl cursor-pointer group bg-main-gray"
+              className="w-full flex flex-col p-5 gap-3 rounded-xl cursor-pointer group bg-main-gray
+             transition-all duration-150"
             >
-              <h1 className="font-bold text-lg md:text-xl group-hover:text-main-green duration-150">
+              <h1 className="font-bold text-lg md:text-xl group-hover:text-main-green group-active:text-main-green duration-150">
                 {item.title}
               </h1>
               <p className="font-normal text-base opacity-80">

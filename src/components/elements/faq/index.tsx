@@ -49,7 +49,7 @@ const Faq = () => {
       className="w-[95%] md:w-[80%] lg:w-full mx-auto pt-0 md:pt-8 lg:pt-16 pb-8 lg:px-24 flex flex-col items-center gap-5 md:gap-10"
     >
       <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">FAQ</h1>
-      <div className="w-full lg:w-1/2 flex flex-col gap-1">
+      <div className="w-full lg:w-[60%] flex flex-col gap-1">
         {faq.map((item) => (
           <Accordion
             key={item.id}
@@ -58,10 +58,12 @@ const Faq = () => {
             collapsible
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger className="cursor-pointer">
+              <AccordionTrigger className="cursor-pointer text-base md:text-lg lg:text-xl font-medium">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
+              <AccordionContent className="font-normal text-xs md:text-sm lg:text-lg">
+                {item.answer}
+              </AccordionContent>
             </AccordionItem>
           </Accordion>
         ))}

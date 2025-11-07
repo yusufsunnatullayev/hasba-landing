@@ -144,3 +144,15 @@ h2 {
     @apply bg-background text-foreground;
   }
 }
+
+h1 {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.text-layer-fix {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+}

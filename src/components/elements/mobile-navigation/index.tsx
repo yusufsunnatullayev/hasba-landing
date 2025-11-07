@@ -28,12 +28,21 @@ const MobileNavigation = ({ open, setOpen, screen }: Props) => {
             </div>
             <ul className="w-full flex flex-col gap-7">
               {nav_items.map((item) => (
-                <li
-                  key={item.id}
-                  onClick={() => setOpen(false)}
-                  className="font-medium text-sm md:text-lg"
-                >
-                  <a href={item.link}>{item.title}</a>
+                <li key={item.id} className="font-medium text-sm md:text-lg">
+                  <a
+                    href={item.link}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpen(false);
+                      setTimeout(() => {
+                        const target = document.querySelector(item.link);
+                        if (target)
+                          target.scrollIntoView({ behavior: "smooth" });
+                      }, 300);
+                    }}
+                  >
+                    {item.title}
+                  </a>
                 </li>
               ))}
             </ul>

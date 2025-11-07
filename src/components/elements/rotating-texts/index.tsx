@@ -25,14 +25,14 @@ const RotatingTextsComponent = ({
           return (
             <h1
               key={i}
-              className={`absolute left-1/2 top-1/2 transform-gpu transition-all duration-700 ease-in-out text-main-green ${
-                isActive
-                  ? "text-4xl md:text-[72px] font-medium opacity-100"
-                  : "text-2xl font-medium opacity-20"
-              }`}
+              className={`absolute left-1/2 top-1/2 transform-gpu transition-all duration-700 ease-in-out text-main-green text-layer-fix`}
               style={{
-                transform: `translate(-50%, calc(${d * 120}% - 50%))`,
-                transitionProperty: "transform, opacity, font-size",
+                transform: `translate3d(-50%, calc(${
+                  d * 120
+                }% - 50%), 0) scale(${isActive ? 1.4 : 0.8})`,
+                opacity: isActive ? 1 : 0.2,
+                fontSize: "2rem",
+                transitionProperty: "transform, opacity",
               }}
             >
               {text}
