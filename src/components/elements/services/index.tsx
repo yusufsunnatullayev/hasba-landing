@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-[95%] md:w-[80%] lg:w-full pt-12 lg:px-24 mx-auto flex flex-col lg:flex-row items-start justify-between gap-12"
+      className="w-[95%] md:w-[80%] lg:w-full pt-12 overflow-hidden lg:px-24 mx-auto flex flex-col lg:flex-row items-start justify-between gap-12"
     >
       <div className="w-full lg:w-[37%] h-full flex flex-col gap-5">
         <h1 className="text-xl md:text-3xl lg:text-4xl text-center lg:text-start font-bold">

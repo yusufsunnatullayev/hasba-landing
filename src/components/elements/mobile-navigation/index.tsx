@@ -26,10 +26,11 @@ const MobileNavigation = ({ open, setOpen, screen }: Props) => {
                 onClick={() => setOpen(false)}
               />
             </div>
-            <ul className="w-full flex flex-col gap-7">
+            <ul className="w-full flex flex-col gap-6">
               {nav_items.map((item) => (
                 <li key={item.id} className="font-medium text-sm md:text-lg">
                   <a
+                    className="p-3"
                     href={item.link}
                     onClick={(e) => {
                       e.preventDefault();

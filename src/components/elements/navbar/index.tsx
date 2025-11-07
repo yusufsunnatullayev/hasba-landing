@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
         {/* Mobile and Tablet Menu 🚩 */}
         <Menu
-          size={screen === "sm" ? 15 : 30}
+          size={screen === "sm" ? 20 : 30}
           className="cursor-pointer lg:hidden"
           onClick={() => setOpen(true)}
         />

@@ -25,7 +25,7 @@ const problem_solution = [
 
 const ProblemSolution = () => {
   return (
-    <section className="w-[95%] md:w-[80%] lg:w-full pt-8 md:pt-12 mx-auto lg:px-24 flex flex-col items-center gap-8">
+    <section className="w-[95%] md:w-[80%] lg:w-full overflow-hidden pt-8 md:pt-12 mx-auto lg:px-24 flex flex-col items-center gap-8">
       <h1 className="text-xl md:text-3xl lg:text-4xl text-main-green font-bold">
         Muammo & Yechim
       </h1>
